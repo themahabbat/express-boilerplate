@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+body {
+    margin: 0;
+    font-family: Nunito;
+}
+
+.footer {
+    background: linear-gradient(to right, navy,red);
+    padding: 40px;
+    font-size: 30px;
+    color: white;
+}

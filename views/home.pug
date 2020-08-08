@@ -1,0 +1,23 @@
+extends layouts/main.pug
+
+
+block append content
+
+    - const title = "ABC"
+    - const arr = ["ITEM 1", "ITEM 2"]
+
+    h1 #{title}
+    h2 #{fromRoute}
+
+    div.ff#ab(style='color:red') a
+        div b
+            p c
+            a(href=title) HELLO
+
+    hr
+
+    each val,key in arr
+        li #{key}, #{val}
+
+block append footer
+    h1 FOOTER

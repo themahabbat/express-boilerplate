@@ -15,7 +15,9 @@ app.use(morgan('dev'));
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
+
 app.use('/public', express.static(path.join(__dirname, '/../public')));
+app.set('view engine', 'pug')
 
 app.get('/', (req, res) => {
     res.json({
@@ -24,7 +26,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/home.html'));
+
+    const fromRoute = "This text comes from route!"
+
+    res.render('home', { fromRoute });
 })
 
 app.use('/api/v1', api);
