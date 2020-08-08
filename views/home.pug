@@ -10,8 +10,19 @@ block append content
     h1 #{title}
     h2 #{fromRoute}
 
+
+    if check
+        input(type='checkbox' checked)
+        input(type='text' disabled)
+    else
+        input(type='checkbox' checked=false)
+        input(type='text' disabled=false)
+
     div.ff#ab(style='color:red') a
         div b
+            div
+                input(type='text' value=(check ? 'TRUE' : 'FALSE'))
+                label Conditional Attribute Value
             p c
             a(href=title) HELLO
 
