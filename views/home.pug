@@ -3,6 +3,7 @@ extends layouts/main.pug
 
 block append content
 
+    - const check = true
     - const title = "ABC"
     - const arr = ["ITEM 1", "ITEM 2"]
 
@@ -15,6 +16,11 @@ block append content
             a(href=title) HELLO
 
     hr
+
+    if check
+        h1 CONDITION IS TRUE!
+    else
+        h1 CONDITION IS FALSE!
 
     each val,key in arr
         li #{key}, #{val}
